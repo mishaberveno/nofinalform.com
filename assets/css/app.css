@@ -5,47 +5,53 @@
 }
 
 :root {
-    --color-bg: #0E0E0E;
-    --color-text: #EEE;
-    --color-footer: #383838;
+    --color-bg: #FFF;
+    --color-text: #0E0E0E;
+    --color-accent: #5C457B;
+    --color-footer: #D0D0D0;
     --color-border: #333;
-    --color-bg-inv: #FFF;
-    --color-text-inv: #0E0E0E;
-    --color-footer-inv: #D0D0D0;
 }
 
 @font-face {
-   font-family: 'Pitch';
-   src: url('/assets/fonts/pitch-regular.woff2') format('woff2');
+   font-family: 'Montserrat';
+   src: url('/assets/fonts/montserrat-regular.ttf') format('truetype');
    font-weight: 400;
    font-style: normal;
 }
  
 @font-face {
-   font-family: 'Pitch';
-   src: url('/assets/fonts/pitch-bold.woff2') format('woff2');
-   font-weight: 700;
+   font-family: 'Montserrat';
+   src: url('/assets/fonts/montserrat-semibold.ttf') format('truetype');
+   font-weight: 600;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'Pitch';
-   src: url('/assets/fonts/pitch-regular-italic.woff2') format('woff2');
+   font-family: 'Montserrat';
+   src: url('/assets/fonts/montserrat-regular-italic.ttf') format('truetype');
    font-weight: 400;
    font-style: italic;
 }
 
 body {
     background-color: var(--color-bg);
-    font-family: 'Pitch', monospace;
+    font-family: 'montserrat', sans-serif;
+    color: var(--color-text);
     font-size: 1rem;
     font-weight: 400;
-    color: var(--color-text);
-    line-height: 1.4rem;
+    line-height: 1.5rem;
+}
+
+header {
+    margin-top: 2.75rem;
 }
 
 section {
     margin-block: 2.75rem;
+}
+
+section.first {
+    margin-top: 1rem;
 }
 
 article {
@@ -53,18 +59,30 @@ article {
 }
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
+    color: var(--color-accent);
+}
+
+h1.letter {
+    margin-bottom: 2rem;
 }
 
 h2 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+h2.letter {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 3.5rem 0 1rem;
 }
 
 h3 {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     margin: 1rem 0;
 }
 
@@ -77,7 +95,7 @@ li + li {
 }
 
 strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 em {
@@ -85,8 +103,8 @@ em {
 }
 
 a { 
-    color: var(--color-text);
     text-decoration: underline;
+    color: var(--color-accent);
 }
 
 a:hover {
@@ -98,11 +116,11 @@ input {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: var(--color-border);
-    font-family: 'Pitch', monospace;
+    font-family: 'montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--color-text-inv);
-    line-height: 1.4rem;
+    color: var(--color-accent);
+    line-height: 1.5rem;
 }
 
 input[type="submit"] {
@@ -119,58 +137,9 @@ input[type="email"]:focus {
     outline: none;
 }
 
-footer {
+footer, footer h2 {
     color: var(--color-footer);
     margin-bottom: 2.75rem;
-}
-
-.youtube {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-}
-
-.content img {
-    max-width: 100%;
-}
-
-.content .logo {
-    max-width: 300px;
-    margin: 3rem 0 0.5rem;
-}
-
-.project {
-    margin-bottom: 2rem;
-}
-
-.no-bullets {
-    list-style: none;
-}
-
-.no-underline {
-    text-decoration: none;
-}
-
-#verbal-identity, #copywriting, #editing, #advertising, #scriptwriting {
-    scroll-margin-top: 5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-/* THE GIST OF */
-
-body.gist {
-    background-color: var(--color-bg-inv);
-    color: var(--color-text-inv);
-}
-
-h1.letter {
-    margin-bottom: 2rem;
-}
-
-h2.letter {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin: 3.5rem 0 1rem;
 }
 
 blockquote {
@@ -183,21 +152,33 @@ ul.letter, ol.letter {
     margin: 1rem 0;
 }
 
-a.gist {
-    color: var(--color-text-inv);
-}
-
-.content .logo-gist {
-    max-width: 100px;
-    margin: 3rem 0 2rem;
-}
-
 p.line {
     margin-top: 1.5rem;
 }
 
-footer.gist {
-    color: var(--color-footer-inv);
+header.grid {
+    align-items: center;
+}
+
+.youtube {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.logo {
+    max-width: 65px;
+}
+
+.no-bullets {
+    list-style: none;
+}
+
+.no-underline {
+    text-decoration: none;
 }
 
 /* GRID */
