@@ -5,7 +5,7 @@
 }
 
 :root {
-    --color-bg: #FFF;
+    --color-bg: #f3f1ea;
     --color-text: #0E0E0E;
     --color-accent: #5C457B;
     --color-footer: #D0D0D0;
@@ -34,7 +34,17 @@
 }
 
 body {
-    background-color: var(--color-bg);
+    background:
+    radial-gradient(1200px 700px at 50% 55%,
+      rgba(255,255,255,0.70) 0%,
+      rgba(255,255,255,0.12) 55%,
+      rgba(0,0,0,0.10) 100%),
+    repeating-linear-gradient(0deg,
+      rgba(0,0,0,0.02) 0px,
+      rgba(0,0,0,0.02) 1px,
+      rgba(255,255,255,0.02) 2px,
+      rgba(255,255,255,0.02) 3px),
+    var(--color-bg);
     font-family: 'montserrat', sans-serif;
     color: var(--color-text);
     font-size: 1rem;
