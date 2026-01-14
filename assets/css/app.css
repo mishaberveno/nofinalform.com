@@ -5,7 +5,7 @@
 }
 
 :root {
-    --color-bg: #fbfbfb;
+    --color-bg: #fdfdfd;
     --color-text: #0E0E0E;
     --color-accent: #5C457B;
     --color-footer: #D0D0D0;
@@ -65,7 +65,7 @@ html::before{
       rgba(255,255,255,0.012) 2px,
       rgba(255,255,255,0.012) 3px);
 
-    opacity: 0.35;
+    opacity: 0.45;
 }
 
 header {
