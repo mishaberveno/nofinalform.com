@@ -5,7 +5,7 @@
 }
 
 :root {
-    --color-bg: #f3f1ea;
+    --color-bg: #fbfbfb;
     --color-text: #0E0E0E;
     --color-accent: #5C457B;
     --color-footer: #D0D0D0;
@@ -33,23 +33,39 @@
    font-style: italic;
 }
 
+html {
+    min-height: 100%;
+    background: var(--color-bg);
+}
+
 body {
-    background:
-    radial-gradient(1200px 700px at 50% 55%,
-      rgba(255,255,255,0.70) 0%,
-      rgba(255,255,255,0.12) 55%,
-      rgba(0,0,0,0.10) 100%),
-    repeating-linear-gradient(0deg,
-      rgba(0,0,0,0.02) 0px,
-      rgba(0,0,0,0.02) 1px,
-      rgba(255,255,255,0.02) 2px,
-      rgba(255,255,255,0.02) 3px),
-    var(--color-bg);
+    min-height: 100vh;
+    background: var(--color-bg);
     font-family: 'montserrat', sans-serif;
     color: var(--color-text);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
+}
+
+html::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(1200px 800px at 50% 40%,
+      rgba(255,255,255,0.85) 0%,
+      rgba(255,255,255,0.35) 55%,
+      rgba(0,0,0,0.06) 100%),
+    repeating-linear-gradient(0deg,
+      rgba(0,0,0,0.012) 0px,
+      rgba(0,0,0,0.012) 1px,
+      rgba(255,255,255,0.012) 2px,
+      rgba(255,255,255,0.012) 3px);
+
+    opacity: 0.35;
 }
 
 header {
@@ -122,6 +138,7 @@ a:hover {
 }
 
 input {
+    background: transparent;
     border-style: none;
     border-bottom-width: 1px;
     border-bottom-style: solid;
