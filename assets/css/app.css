@@ -13,29 +13,29 @@
 }
 
 @font-face {
-   font-family: 'Montserrat';
-   src: url('/assets/fonts/montserrat-regular.ttf') format('truetype');
+   font-family: 'Family';
+   src: url('/assets/fonts/family-regular.woff2') format('woff2');
    font-weight: 400;
    font-style: normal;
 }
  
 @font-face {
-   font-family: 'Montserrat';
-   src: url('/assets/fonts/montserrat-semibold.ttf') format('truetype');
-   font-weight: 600;
+   font-family: 'Family';
+   src: url('/assets/fonts/family-bold.woff2') format('woff2');
+   font-weight: 700;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'Montserrat';
-   src: url('/assets/fonts/montserrat-regular-italic.ttf') format('truetype');
+   font-family: 'Family';
+   src: url('/assets/fonts/family-italic.woff2') format('woff2');
    font-weight: 400;
    font-style: italic;
 }
 
 body {
     background-color: var(--color-bg);
-    font-family: 'montserrat', sans-serif;
+    font-family: 'family', sans-serif;
     color: var(--color-text);
     font-size: 1rem;
     font-weight: 400;
@@ -112,7 +112,7 @@ input {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: var(--color-border);
-    font-family: 'montserrat', sans-serif;
+    font-family: 'family', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: var(--color-accent);
