@@ -223,6 +223,10 @@ header.grid {
 }
 
 @media (max-width: 768px) {
+    .grid {
+        padding: 0 20px;
+    }
+    
     .label {
         grid-column: 1 / -1;
         text-align: left;
