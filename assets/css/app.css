@@ -99,12 +99,14 @@ em {
 }
 
 a { 
-    text-decoration: underline;
     color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: text-decoration-color 200ms;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration-color: transparent;
 }
 
 input {
