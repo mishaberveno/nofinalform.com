@@ -221,3 +221,14 @@ header.grid {
 .content {
     grid-column: 5 / 13;
 }
+
+@media (max-width: 768px) {
+    .label {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+    
+    .content {
+        grid-column: 1 / -1;
+    }
+}
