@@ -241,4 +241,8 @@ header.grid {
     h1 {
         margin-bottom: 1.5rem;
     }
+
+    footer h2 {
+    margin-bottom: 1rem;
+}
 }
