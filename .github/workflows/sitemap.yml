@@ -1,0 +1,54 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main  # Adjust this if you are using a different branch (e.g., 'master')
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      # Install and generate the sitemap
+      - name: Generate Sitemap
+        run: |
+          npm install -g sitemap-generator-cli  # Install the sitemap generator
+          sitemap-generator https://berveno.com -o sitemap.xml -l # Replace with your site URL
+
+      - name: Set up SSH for git push
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_GENERATE_SITEMAP }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          git config --global url."git@github.com:".insteadOf "https://github.com/"
+        env:
+          GITHUB_SSH_PRIVATE_KEY: ${{ secrets.SSH_GENERATE_SITEMAP }}  # Add your private key to GitHub secrets
+
+      # Commit and push the generated sitemap to the repo
+      - name: Commit and Push the Sitemap
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if sitemap.xml has been modified
+          if git diff --exit-code sitemap.xml; then
+            echo "No changes detected, skipping commit."
+          else
+            git add sitemap.xml  # Add the generated sitemap to the git index
+            git commit -m "auto-generated sitemap"  # Commit the change
+            git push origin main  # Push to the main branch (adjust if you're pushing to a different branch)
+          fi
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Actions token automatically provided
