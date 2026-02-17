@@ -23,7 +23,7 @@ jobs:
       - name: Generate Sitemap
         run: |
           npm install -g sitemap-generator-cli  # Install the sitemap generator
-          sitemap-generator https://berveno.com -o sitemap.xml -l # Replace with your site URL
+          sitemap-generator https://nofinalform.com/ -o sitemap.xml -l # Replace with your site URL
 
       - name: Set up SSH for git push
         run: |
