@@ -179,8 +179,6 @@ header.grid {
     text-decoration: none;
 }
 
-/* GRID */
-
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -189,15 +187,15 @@ header.grid {
     margin-inline: auto;
 }
 
-.col-1  { grid-column: span 1; }
-.col-2  { grid-column: span 2; }
-.col-3  { grid-column: span 3; }
-.col-4  { grid-column: span 4; }
-.col-5  { grid-column: span 5; }
-.col-6  { grid-column: span 6; }
-.col-7  { grid-column: span 7; }
-.col-8  { grid-column: span 8; }
-.col-9  { grid-column: span 9; }
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
 .col-10 { grid-column: span 10; }
 .col-11 { grid-column: span 11; }
 .col-12 { grid-column: span 12; }
@@ -243,6 +241,6 @@ header.grid {
     }
 
     footer h2 {
-    margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
