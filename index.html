@@ -5,15 +5,19 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preload" href="/assets/fonts/montserrat-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <title>No Final Form by Misha Berveno</title>
+    <meta name="description" content="Get an occasional newsletter with updates on all the creative projects Misha Berveno is working on, from short stories to web apps.">
+
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="No Form" />
     <link rel="manifest" href="/assets/favicons/site.webmanifest" />
-
-    <title>No Final Form by Misha Berveno</title>
-    <meta name="description" content="Get an occasional newsletter with updates on all the creative projects Misha Berveno is working on, from short stories to web apps.">
 	
     <meta property="og:url" content="https://nofinalform.com"> 
   	<meta property="og:title" content="No Final Form by Misha Berveno">
@@ -22,14 +26,31 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mishaberveno">
     
-	<link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="preload" href="/assets/css/app.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/app.css"></noscript>
+    
     <link rel="canonical" href="https://nofinalform.com">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "No Final Form",
+      "url": "https://nofinalform.com",
+      "description": "An occasional newsletter with updates on all the creative projects Misha Berveno is working on, from short stories to web apps.",
+      "author": {
+        "@type": "Person",
+        "name": "Misha Berveno",
+        "url": "https://berveno.com"
+      }
+    }
+    </script>
 </head>
 
 <body>
     <header class="grid">
         <div class="label">
-            <a href="/"><img src="/assets/logo/no-final-form.svg" alt="No Final Form logo" class="logo"></a>
+            <a href="/"><img src="/assets/logos/no-final-form.svg" alt="No Final Form logo" class="logo"></a>
         </div>
         <div class="content">
             <h1><a href="/" class="no-underline">No Final Form</a></h1>
