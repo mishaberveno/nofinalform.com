@@ -15,21 +15,21 @@
 
 @font-face {
    font-family: 'GT Walsheim';
-   src: url('/assets/fonts/GT-Walsheim-Light.woff2') format('woff2');
+   src: url('/assets/fonts/gt-walsheim-light.woff2') format('woff2');
    font-weight: 300;
    font-style: normal;
 }
 
 @font-face {
    font-family: 'GT Walsheim';
-   src: url('/assets/fonts/GT-Walsheim-Medium.woff2') format('woff2');
+   src: url('/assets/fonts/gt-walsheim-medium.woff2') format('woff2');
    font-weight: 500;
    font-style: normal;
 }
 
 @font-face {
    font-family: 'GT Walsheim';
-   src: url('/assets/fonts/GT-Walsheim-Light-Oblique.woff2') format('woff2');
+   src: url('/assets/fonts/gt-walsheim-light-oblique.woff2') format('woff2');
    font-weight: 300;
    font-style: italic;
 }
@@ -68,8 +68,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.125rem;
+    font-weight: 500;
     color: var(--color-text);
 }
 
